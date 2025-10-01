@@ -9,6 +9,7 @@ from api.endpoints.user import user_router, user_protected_router
 from api.models.connection import init_db
 from api.services.service import services_router
 
+
 app = FastAPI()
 
 
@@ -24,3 +25,5 @@ app.include_router(genre_router, prefix="/genre", tags=["Genre"], dependencies=[
 app.include_router(exchange_request_router, prefix="/exchange_request", tags=["Exchange Request"],
                    dependencies=[Depends(get_current_user)])
 app.include_router(services_router, prefix="/services", tags=["Services"], dependencies=[Depends(get_current_user)])
+
+

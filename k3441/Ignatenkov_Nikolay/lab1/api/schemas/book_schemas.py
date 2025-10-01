@@ -7,7 +7,6 @@ from api.models.models import Status
 
 
 class BookCreate(BaseModel):
-    user_id: int
     title: str
     author: str
     description: str
