@@ -1,4 +1,3 @@
-# api/routers/book_router.py
 from typing import List
 from fastapi import HTTPException, Depends, APIRouter
 from sqlmodel import select, delete

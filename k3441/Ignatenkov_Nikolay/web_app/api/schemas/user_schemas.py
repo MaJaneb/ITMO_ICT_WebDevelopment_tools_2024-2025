@@ -39,17 +39,5 @@ class TokenData(BaseModel):
 
 
 class Token(BaseModel):
-    """Схема JWT токена"""
     access_token: str
     token_type: str = "bearer"
-
-class UserBookCreate(BaseModel):
-    user_id: int
-    book_id: int
-
-
-class UserBookResponse(BaseModel):
-    id: int
-    user_id: int
-    book_id: int
-    created_at: datetime

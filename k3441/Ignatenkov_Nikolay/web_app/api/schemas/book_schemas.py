@@ -1,4 +1,4 @@
-# api/schemas/book_schemas.py
+
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
@@ -7,6 +7,7 @@ from api.models.models import Status
 
 
 class BookCreate(BaseModel):
+    user_id: int
     title: str
     author: str
     description: str
@@ -23,7 +24,6 @@ class BookUpdate(BaseModel):
     genre_ids: Optional[List[int]] = None
 
 
-# Для ответа можно вернуть список жанров (с id и названием)
 class GenreForBookResponse(BaseModel):
     id: int
     name: str
